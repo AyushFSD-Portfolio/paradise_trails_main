@@ -11,30 +11,30 @@
     />
     <!-- Your main CSS -->
     <link rel="stylesheet" href="../styles/trips.css" />
-   
   </head>
   <body>
     <!-- ====================== Navigation ====================== -->
-      <!-- LOGO --> 
+    <!-- LOGO -->
     <header class="mobile-header">
-     
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
     <!-- Navigation -->
     <div class="nav-container" id="navContainer">
-        <nav class="bottom-nav" id="navMenu">
-            <a href="../pages/home.html" class="nav-item active">Home</a>
-            <a href="../pages/home.html#destinations" class="nav-item">Destinations</a>
-            <a href="../pages/trips.html" class="nav-item">Trips</a>
-            <a href="#gallery" class="nav-item">Gallery</a>
-            <a href="../pages/about.html" class="nav-item">About</a>
-            <a href="../pages/contact.html" class="nav-item">Contact</a>
-        </nav>
+      <nav class="bottom-nav" id="navMenu">
+        <a href="../pages/home.html" class="nav-item">Home</a>
+        <a href="../pages/home.html#destinations" class="nav-item"
+          >Destinations</a
+        >
+        <a href="../pages/trips.html" class="nav-item active">Trips</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="../pages/about.html" class="nav-item">About</a>
+        <a href="../pages/contact.html" class="nav-item">Contact</a>
+      </nav>
     </div>
 
     <!-- ====================== Hero Section ====================== -->
@@ -51,7 +51,25 @@
               From lush forests to rugged mountains, get ready to explore
               breathtaking landscapes and encounter amazing wildlife up close.
             </p>
-            <a href="#booking" class="cta-button">Start Planning Now</a>
+
+            <!-- From Uiverse.io by alexmaracinaru -->
+
+            <!-- From Uiverse.io by adamgiebl -->
+            <a href="../pages/contact_form.html" class="start-planning-link">
+              <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>Start Planning</span>
+            </a>
           </div>
 
           <!-- ========== Filter Form ========== -->
@@ -102,7 +120,7 @@
       </div>
     </section>
     <!-- ====================== Adventures Gallery Section ====================== -->
-     <!-- Adventures Gallery Section -->
+    <!-- Adventures Gallery Section -->
     <section class="adventures-gallery" id="trips">
       <div class="container">
         <!-- Section Header -->
@@ -177,6 +195,96 @@
         </div>
       </div>
     </div>
+
+     <footer class="footer">
+      <div class="footer-content">
+        <div class="brand-section">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo/paradise-logo.png"
+              class="logo-footer animate-on-scroll"
+              alt="Paradse Logo"
+          /></a>
+          <p class="brand-description animate-on-scroll">
+            As a naturalist, I observe the world not just with curiosity, but
+            with purpose. I believe every leaf, stone, and species holds a story
+            worth listening to. My work is driven by a deep respect for nature
+            and a commitment to understanding, preserving, and living in harmony
+            with it. To me, nature isn't separate from us — it's a part of who
+            we are.
+          </p>
+        </div>
+
+        <div class="footer-column animate-on-scroll">
+          <h3>Socials</h3>
+          <a
+            href="https://www.youtube.com/c/ParadiseTrailsSriLanka"
+            target="_blank"
+            class="footer-link"
+          >
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a
+            href="https://www.instagram.com/paradisetrailslk/"
+            target="_blank"
+            class="footer-link"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/paradisetrailslk"
+            target="_blank"
+            class="footer-link"
+          >
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+        </div>
+
+        <div class="footer-column animate-on-scroll">
+          <h3>Navigation</h3>
+          <a href="#home" class="footer-link"
+            ><i class="fas fa-house"></i> Home</a
+          >
+          <a href="#destinations" class="footer-link"
+            ><i class="fas fa-map-marker-alt"></i> Destinations</a
+          >
+          <a href="trips.html" class="footer-link"
+            ><i class="fas fa-plane"></i> Trips</a
+          >
+          <a href="./gallery.html" class="footer-link"
+            ><i class="fas fa-image"></i> Gallery</a
+          >
+          <a href="#about" class="footer-link"
+            ><i class="fas fa-user"></i> About</a
+          >
+          <a href="#contact" class="footer-link"
+            ><i class="fas fa-envelope"></i> Contact</a
+          >
+        </div>
+
+        <div class="contact-box animate-on-scroll">
+          <h3>Contact me for any further details</h3>
+
+          <!-- Contact number -->
+          <p class="contact-number">
+            <a href="tel:+94772243030">📞 Call us on 077 224 3030</a>
+          </p>
+
+          <p>
+            Ready to embark on your next adventure? Let's create unforgettable
+            memories together.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2024 ParadiseTrails Pvt. Ltd. All rights reserved. Made with
+          <span class="heart">💚</span> by @Enjoy Programming
+        </p>
+      </div>
+      <!-- -----------------------BOTTOM FOOTER SECTION END ---------------------- -->
+    </footer>
 
     <!-- Your JS file -->
     <!-- <script src="./trips-data.js"></script> -->

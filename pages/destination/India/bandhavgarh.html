@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="../../../styles/destination/india/bandhavgarh.css"
     />
-    
     <link rel="icon"
         href="https://images.vexels.com/media/users/3/312344/isolated/preview/9644600280ae32a366400a8c9d9030f7-green-leaves-on-a-safari-expedition.png"
         type="image/png" />
@@ -18,31 +17,40 @@
   <body>
     <!-- Navigation Bar -->
     <!-- Mobile Header -->
-  
-      <!-- LOGO --> 
     <header class="mobile-header">
-     
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <a href="../home.html" class="logo"></a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
-    <!-- Navigation -->
-    <div class="nav-container" id="navContainer">
-        <nav class="bottom-nav" id="navMenu">
-            <a href="../../../pages/home.html" class="nav-item ">Home</a>
-            <a href="../../../pages/home.html#destination" class="nav-item active">Destinations</a>
-            <a href="../../../pages/trips.html" class="nav-item ">Trips</a>
-            <a href="../../../pages/gallery.html" class="nav-item">Gallery</a>
-            <a href="../../../pages/about.html" class="nav-item">About</a>
-            <a href="../../../pages/contact.html" class="nav-item">Contact</a>
-        </nav>
-    </div>
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="../home.html" class="nav-item">Home</a>
+      <a href="../home.html#destination" class="nav-item active"
+        >Destinations</a
+      >
+      <a href="../trips.html" class="nav-item">Trips</a>
+      <a href="../../pages/gallery.html" class="nav-item">Gallery</a>
+      <a href="../home.html#about" class="nav-item">About</a>
+      <a href="../contact.html" class="nav-item">Contact</a>
+    </nav>
 
- 
-   
+    <!-- Desktop Navigation Bar -->
+    <div class="nav-container" id="bottomNav">
+      <nav class="bottom-nav">
+        <a href="../home.html" class="nav-item">Home</a>
+        <a href="../home.html#destination" class="nav-item active"
+          >Destinations</a
+        >
+        <a href="../trips.html" class="nav-item">Trips</a>
+        <a href="../../pages/gallery.html" class="nav-item">Gallery</a>
+        <a href="../home.html#about" class="nav-item">About</a>
+        <a href="../contact.html" class="nav-item">Contact</a>
+      </nav>
+    </div>
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="logo">
@@ -56,13 +64,13 @@
         </p>
         <div class="hero-buttons">
           <a
-            href="#highlights"
+            href="#map"
             class="btn btn-primary"
             onclick="scrollToSection('highlights')"
             >Explore Wildlife</a
           >
           <a
-            href="../../../pages/contact_form.html"
+            href="../contact.html"
             class="btn btn-secondary"
             onclick="scrollToSection('map')"
             >Contact Us</a
@@ -202,10 +210,10 @@
         <div class="map-visual">
           <div class="map-placeholder">
             <img
-              src="https://www.pugdundeesafaris.com/assets/img/bandhavgarh-tiger-reserve---map-thh.png"
+              src="../../assets/images/bandhavgarh-images/bandhavgarh-map-main.jpeg"
               alt="Bandhavgarh Map"
-              height="500px"
-              width="600px"
+              height="800px"
+              width="700px"
             />
           </div>
         </div>
@@ -436,7 +444,5 @@
           });
       }
     </script>
-
-    <script src="../../../pages/home.js"></script>
   </body>
 </html>

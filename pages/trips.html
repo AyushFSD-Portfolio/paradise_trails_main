@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Safari Experiences</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Your main CSS -->
+    <link rel="stylesheet" href="../styles/trips.css" />
+  </head>
+  <body>
+    <!-- ====================== Navigation ====================== -->
+    <div class="nav-container">
+      <nav class="bottom-nav">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#destinations" class="nav-item">Destinations</a>
+        <a href="../pages/trips.html" class="nav-item active">Trips</a>
+        <a href="./gallery.html" class="nav-item">Gallery</a>
+        <a href="../pages/about.html" class="nav-item">About</a>
+        <a href="./contact.html" class="nav-item">Contact</a>
+      </nav>
+    </div>
+
+    <!-- ====================== Hero Section ====================== -->
+    <section class="background">
+      <div class="overlay">
+        <div class="content-wrapper">
+          <div class="trip-header">
+            <h1>Plan Your Trip</h1>
+            <p>
+              Discover wildlife adventures across America's most stunning
+              national parks
+            </p>
+            <p>
+              From lush forests to rugged mountains, get ready to explore
+              breathtaking landscapes and encounter amazing wildlife up close.
+            </p>
+            <a href="#booking" class="cta-button">Start Planning Now</a>
+          </div>
+
+          <!-- ========== Filter Form ========== -->
+          <div class="form-box">
+            <div class="form-group">
+              <label>Select Park</label>
+              <select>
+                <option>All / Any</option>
+                <option>Yellowstone National Park</option>
+                <option>Grand Canyon National Park</option>
+                <option>Yosemite National Park</option>
+                <option>Zion National Park</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Location</label>
+              <select>
+                <option>All / Any</option>
+                <option>Wyoming</option>
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Utah</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Animal</label>
+              <select>
+                <option>All / Any</option>
+                <option>Bears</option>
+                <option>Elk</option>
+                <option>Bison</option>
+                <option>Mountain Lions</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Vehicle</label>
+              <select>
+                <option>All / Any</option>
+                <option>Car</option>
+                <option>SUV</option>
+                <option>Motorcycle</option>
+                <option>RV</option>
+              </select>
+            </div>
+            <button onclick="searchFunction()">Find My Trip</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== Adventures Gallery Section ====================== -->
+     <!-- Adventures Gallery Section -->
+    <section class="adventures-gallery" id="trips">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2>Featured Safari Experiences</h2>
+          <p>
+            Carefully curated wildlife adventures designed for unforgettable
+            encounters with nature
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="category-filters">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-globe"></i><span>All Adventures</span>
+          </button>
+          <button class="filter-btn" data-filter="recent">
+            <i class="fas fa-clock"></i><span>Recent Tours</span>
+          </button>
+          <button class="filter-btn" data-filter="upcoming">
+            <i class="fas fa-calendar-alt"></i><span>Upcoming Tours</span>
+          </button>
+          <button class="filter-btn" data-filter="popular">
+            <i class="fas fa-star"></i><span>Most Popular</span>
+          </button>
+        </div>
+
+        <!-- Adventures Grid -->
+        <div class="adventures-grid" id="adventuresGrid">
+          <!-- Cards will be populated by JavaScript -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-section">
+          <button class="load-more-btn" id="loadMoreBtn">
+            <span>Load More Adventures</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIXED Trip Modal -->
+    <div class="trip-modal-overlay" id="tripModal">
+      <div class="trip-modal">
+        <div class="modal-header">
+          <img id="modalImage" src="" alt="Trip Image" />
+          <button class="modal-close-btn" onclick="closeModal()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-content">
+          <h2 id="modalTitle" class="modal-title"></h2>
+          <p id="modalLocation" class="modal-location"></p>
+          <p id="modalDescription" class="modal-description"></p>
+
+          <div class="modal-details">
+            <h4>Trip Highlights</h4>
+            <ul id="modalDetails"></ul>
+          </div>
+
+          <div id="modalPrice" class="modal-price"></div>
+
+          <div class="modal-actions">
+            <button class="modal-btn btn-primary" onclick="bookTrip()">
+              Book Now
+            </button>
+            <button class="modal-btn btn-secondary" onclick="closeModal()">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your JS file -->
+    <!-- <script src="./trips-data.js"></script> -->
+    <!-- ====================== Scripts ====================== -->
+    <script src="./trips.js"></script>
+  </body>
+</html>

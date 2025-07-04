@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradise Trails - Gallery</title>
+    <link
+      rel="icon"
+      href="https://images.vexels.com/media/users/3/312344/isolated/preview/9644600280ae32a366400a8c9d9030f7-green-leaves-on-a-safari-expedition.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../styles/gallery.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Navigation Bar -->
+      <!-- Enhanced Navigation -->
+      <div class="nav-container" id="bottomNav">
+        <nav class="bottom-nav">
+          <a href="./home.html" class="nav-item" data-page="home">Home</a>
+          <a
+            href="./home.html#destinations"
+            class="nav-item"
+            data-page="destinations"
+            >Destinations</a
+          >
+          <a href="trips.html" class="nav-item" data-page="about">Trips</a>
+          <a
+            href="./gallery.html#gallery"
+            class="nav-item active"
+            data-page="gallery"
+            >Gallery</a
+          >
+          <a href="./home.html#about" class="nav-item" data-page="about"
+            >About</a
+          >
+          <a href="../pages/contact.html" class="nav-item" data-page="contact"
+            >Contact</a
+          >
+        </nav>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero-section" id="hero">
+        <img
+          src="../assets/images/gallery-background-image.avif"
+          alt="Paradise Trails Gallery Hero"
+          class="hero-image"
+        />
+
+        <div class="floating-elements">
+          <div class="floating-feather"></div>
+          <div class="floating-feather"></div>
+          <div class="floating-feather"></div>
+        </div>
+
+        <div class="logo">
+          <img
+            src="../assets/images/logo/paradise-logo.png"
+            alt=""
+            height="70px"
+          />
+        </div>
+
+        <div class="main-title">
+          <h2>Gallery</h2>
+        </div>
+      </div>
+
+      <!-- Gallery Content -->
+      <div class="gallery-content" id="gallery">
+        <div class="container">
+          <div class="section-title">
+            <h2>Moments from the Wild</h2>
+            <p class="subtitle">
+              Capturing the beauty and wonder of nature's finest moments
+            </p>
+          </div>
+
+          <!-- Main Gallery Grid -->
+          <div class="main-gallery-item" onclick="openModal(this)">
+            <img
+              style="height: 400px"
+              src="../assets/images/paradise-group-photo.jpg"
+              alt="Group Safari Experience"
+            />
+          </div>
+          <br />
+          <div class="main-gallery">
+            <div
+              class="main-gallery-item main-gallery-large"
+              onclick="openModal(this)"
+            >
+              <img
+                src="../assets/images/group-image-main.png"
+                alt="Group Safari Experience"
+              />
+            </div>
+            <div class="main-gallery-right">
+              <div class="main-gallery-item" onclick="openModal(this)">
+                <img src="../assets/images/tiger-one.jpg" alt="Lions Pride" />
+              </div>
+              <div class="main-gallery-item" onclick="openModal(this)">
+                <img
+                  src="../assets/images/elephant-one.jpg"
+                  alt="Elephant Encounter"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Now Button -->
+          <div class="book-now-container">
+            <a href="../pages/contact_form.html" class="book-now-btn">Book Now</a>
+          </div>
+
+          <!-- Small Gallery Grid -->
+          <div class="small-gallery">
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img src="../assets/images/bird-one.jpg" alt="Colorful Bird" />
+            </div>
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img src="../assets/images/bisen-one.jpg" alt="Camouflaged Cat" />
+            </div>
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img src="../assets/images/tiger-two.jpg" alt="Blue Bird" />
+            </div>
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img
+                src="../assets/images/spoted-laypard.jpg"
+                alt="Spotted Leopard"
+              />
+            </div>
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img src="../assets/images/tiger-four.jpg" alt="Tiger Portrait" />
+            </div>
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img src="../assets/images/owl.jpg" alt="Owl Close-up" />
+            </div>
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img
+                src="../assets/images/elephant-with-family.jpg"
+                alt="Elephant Family"
+              />
+            </div>
+            <div class="small-gallery-item" onclick="openModal(this)">
+              <img src="../assets/images/two-tigers.jpg" alt="Wild Rams" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group-image-section">
+        <img src="../assets/images/group-of-tadoba.png" width="100%" alt="" />
+      </div>
+
+      <!-- Footer Section -->
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="brand-section">
+            <a href="../index.html">
+              <img
+                src="../assets/images/logo/paradise-logo.png"
+                class="logo-footer animate-on-scroll"
+                alt="Paradse Logo"
+            /></a>
+            <p class="brand-description animate-on-scroll">
+              As a naturalist, I observe the world not just with curiosity, but
+              with purpose. I believe every leaf, stone, and species holds a
+              story worth listening to. My work is driven by a deep respect for
+              nature and a commitment to understanding, preserving, and living
+              in harmony with it. To me, nature isn't separate from us — it's a
+              part of who we are.
+            </p>
+          </div>
+
+          <div class="footer-column animate-on-scroll">
+            <h3>Socials</h3>
+            <a
+              href="https://www.youtube.com/c/ParadiseTrailsSriLanka"
+              target="_blank"
+              class="footer-link"
+            >
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a
+              href="https://www.instagram.com/paradisetrailslk/"
+              target="_blank"
+              class="footer-link"
+            >
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a
+              href="https://www.facebook.com/paradisetrailslk"
+              target="_blank"
+              class="footer-link"
+            >
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+          </div>
+
+          <div class="footer-column animate-on-scroll">
+            <h3>Navigation</h3>
+            <a href="#home" class="footer-link"
+              ><i class="fas fa-house"></i> Home</a
+            >
+            <a href="#destinations" class="footer-link"
+              ><i class="fas fa-map-marker-alt"></i> Destinations</a
+            >
+            <a href="trips.html" class="footer-link"
+              ><i class="fas fa-plane"></i> Trips</a
+            >
+            <a href="./gallery.html" class="footer-link"
+              ><i class="fas fa-image"></i> Gallery</a
+            >
+            <a href="#about" class="footer-link"
+              ><i class="fas fa-user"></i> About</a
+            >
+            <a href="#contact" class="footer-link"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </div>
+
+          <div class="contact-box animate-on-scroll">
+            <h3>Contact me for any further details</h3>
+
+            <!-- Contact number -->
+            <p class="contact-number">
+              <a href="tel:+94772243030">📞 Call us on 077 224 3030</a>
+            </p>
+
+            <p>
+              Ready to embark on your next adventure? Let's create unforgettable
+              memories together.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2024 ParadiseTrails Pvt. Ltd. All rights reserved. Made with
+            <span class="heart">💚</span> by @Enjoy Programming
+          </p>
+        </div>
+        <!-- -----------------------BOTTOM FOOTER SECTION END ---------------------- -->
+      </footer>
+    </main>
+    <script>
+      // Animate on scroll
+      function animateOnScroll() {
+        const animatedElements = document.querySelectorAll(
+          ".section-title, .main-gallery, .book-now-container, .small-gallery-item, .group-image-section, .footer-section"
+        );
+        animatedElements.forEach((el) => {
+          const position = el.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          if (position < windowHeight - 100) {
+            el.classList.add("animate");
+          }
+        });
+      }
+
+      // Book Now Button
+      function bookNow() {
+        alert("Booking feature coming soon!");
+      }
+
+      // Image Modal (Simple Version)
+      function openModal(element) {
+        const imgSrc = element.querySelector("img").src;
+        const imgAlt = element.querySelector("img").alt;
+
+        // Create overlay
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100vw";
+        overlay.style.height = "100vh";
+        overlay.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+        overlay.style.display = "flex";
+        overlay.style.alignItems = "center";
+        overlay.style.justifyContent = "center";
+        overlay.style.zIndex = 10000;
+        overlay.style.cursor = "pointer";
+
+        // Create image
+        const modalImg = document.createElement("img");
+        modalImg.src = imgSrc;
+        modalImg.alt = imgAlt;
+        modalImg.style.maxWidth = "90%";
+        modalImg.style.maxHeight = "90%";
+        modalImg.style.borderRadius = "10px";
+        modalImg.style.boxShadow = "0 0 20px rgba(255, 255, 255, 0.3)";
+
+        // Append image to overlay
+        overlay.appendChild(modalImg);
+
+        // Remove modal on click
+        overlay.addEventListener("click", () =>
+          document.body.removeChild(overlay)
+        );
+
+        // Append to body
+        document.body.appendChild(overlay);
+      }
+
+      // DOM Content Loaded Event
+      document.addEventListener("DOMContentLoaded", () => {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        // Sticky Navigation Handler
+        const navContainer = document.getElementById("bottomNav");
+        function handleStickyNav() {
+          if (!navContainer) return;
+
+          const currentScrollY = window.scrollY;
+          const isScrollingDown = currentScrollY > lastScrollY;
+
+          if (currentScrollY > 100) {
+            navContainer.classList.add("top");
+            navContainer.style.transform =
+              isScrollingDown && currentScrollY > 200
+                ? "translateY(-100%)"
+                : "translateY(0)";
+          } else {
+            navContainer.classList.remove("top");
+            navContainer.style.transform = "translateY(0)";
+          }
+
+          lastScrollY = currentScrollY;
+        }
+
+        // Add scroll event listeners
+        window.addEventListener("scroll", handleStickyNav);
+        window.addEventListener("scroll", animateOnScroll);
+
+        // Initial animation check
+        animateOnScroll();
+      });
+
+      // Load event for initial animation
+      window.addEventListener("load", animateOnScroll);
+    </script>
+  </body>
+</html>

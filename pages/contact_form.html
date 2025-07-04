@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Trails Wildlife - Book Your Adventure</title>
+<link rel="stylesheet" href="../styles/contactform.css">
+</head>
+<body>
+    <!-- Floating nature elements -->
+    <div class="floating-leaf leaf-1"></div>
+    <div class="floating-leaf leaf-2"></div>
+    <div class="floating-leaf leaf-3"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">🌿 Paradise Trails Wildlife</h1>
+            <p class="tagline">Where Adventure Meets Conservation</p>
+        </div>
+
+        <div class="form-container">
+            <h2 class="form-title">Book Your Safari Adventure</h2>
+            <p class="form-subtitle">Experience the wild like never before</p>
+
+            <form id="bookingForm">
+                <div class="form-grid">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adventureType">Adventure Type *</label>
+                            <select id="adventureType" name="adventureType" required>
+                                <option value="">Select your adventure</option>
+                                <option value="wildlife-safari">🦁 Wildlife Safari</option>
+                                <option value="bird-watching">🦅 Bird Watching Expedition</option>
+                                <option value="photography-tour">📸 Photography Tour</option>
+                                <option value="conservation-experience">🌱 Conservation Experience</option>
+                                <option value="luxury-camping">🏕️ Luxury Camping Safari</option>
+                                <option value="family-adventure">👨‍👩‍👧‍👦 Family Adventure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="groupSize">Group Size *</label>
+                            <select id="groupSize" name="groupSize" required>
+                                <option value="">Number of travelers</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3-4">3-4 People</option>
+                                <option value="5-8">5-8 People</option>
+                                <option value="9+">9+ People</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="preferredDate">Preferred Start Date</label>
+                            <input type="date" id="preferredDate" name="preferredDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration</label>
+                            <select id="duration" name="duration">
+                                <option value="">Select duration</option>
+                                <option value="half-day">Half Day (4 hours)</option>
+                                <option value="full-day">Full Day (8 hours)</option>
+                                <option value="2-days">2 Days / 1 Night</option>
+                                <option value="3-days">3 Days / 2 Nights</option>
+                                <option value="week">1 Week</option>
+                                <option value="custom">Custom Duration</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="specialRequests">Special Requests or Dietary Requirements</label>
+                        <textarea id="specialRequests" name="specialRequests" placeholder="Tell us about any special needs, dietary restrictions, or specific wildlife you'd love to see..."></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="hearAbout">How did you hear about us?</label>
+                        <select id="hearAbout" name="hearAbout">
+                            <option value="">Please select</option>
+                            <option value="google">Google Search</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="friend">Friend/Family Recommendation</option>
+                            <option value="travel-agent">Travel Agent</option>
+                            <option value="previous-customer">Previous Customer</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        <label for="newsletter">I'd like to receive updates about conservation efforts and future adventures</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms & Conditions and understand that this booking is subject to availability *</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        🌟 Begin My Adventure
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Form submission handling
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.firstName || !data.lastName || !data.email || !data.adventureType || !data.groupSize) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            alert('🎉 Your adventure booking request has been submitted! We\'ll contact you within 24 hours to confirm your safari experience.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Enhanced interactivity for inputs
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // Set minimum date to today
+        const dateInput = document.getElementById('preferredDate');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+    </script>
+</body>
+</html>

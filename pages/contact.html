@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tadoba National Park - Wild Adventures Await</title>
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="icon"
+        href="https://images.vexels.com/media/users/3/312344/isolated/preview/9644600280ae32a366400a8c9d9030f7-green-leaves-on-a-safari-expedition.png"
+        type="image/png" />
+  </head>
+  <body>
+    <div class="logo" id="home">
+      <a href="../index.html">
+        <img
+          src="../assets/images/logo/paradise-logo.png"
+          alt="Paradise Trails Logo"
+      /></a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-container" id="bottomNav">
+      <nav class="bottom-nav">
+        <a href="../pages/home.html" class="nav-item" data-page="home">Home</a>
+        <a href="./home.html#destinations" class="nav-item" data-page="features"
+          >Destinations</a
+        >
+        <a href="../pages/trips.html" class="nav-item" data-page="map">Trips</a>
+        <a href="../pages/gallery.html" class="nav-item" data-page="gallery"
+          >Gallery</a
+        >
+        <a href="../pages/about.html" class="nav-item" data-page="about">About</a>
+        <a href="#contact" class="nav-item active" data-page="contact"
+          >Contact</a
+        >
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="hero" id="contact">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="carousel">
+          <div class="carousel-images">
+            <img
+              src="https://images.pexels.com/photos/46254/leopard-wildcat-big-cat-botswana-46254.jpeg"
+              alt="Tiger in Tadoba"
+            />
+            <img
+              src="https://images.pexels.com/photos/594111/pexels-photo-594111.jpeg"
+              alt="Wildlife Safari"
+            />
+            <img
+              src="https://images.pexels.com/photos/234054/pexels-photo-234054.jpeg"
+              alt="Forest Birds"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">
+          Have questions or want to plan your next adventure with Paradise
+          Trails? We're here to help you!
+        </p>
+        <div class="cta-group">
+          <a href="../pages/contact_form.html" class="cta-button cta-primary">Get In Touch</a>
+          <a href="#features" class="cta-button cta-secondary">Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Wildlife Experiences</h2>
+        <div class="features-grid">
+          <div
+            class="feature-card scroll-reveal clickable-card"
+            onclick="showDetails('tiger')"
+          >
+            <h3>🐅 Tiger Safaris</h3>
+            <p>
+              Experience the thrill of spotting the majestic Bengal tigers in
+              their natural habitat. Our expert guides ensure the best wildlife
+              viewing opportunities.
+            </p>
+            <button class="card-button">Learn More</button>
+          </div>
+          <div
+            class="feature-card scroll-reveal clickable-card"
+            onclick="showDetails('birds')"
+          >
+            <h3>🦅 Bird Watching</h3>
+            <p>
+              Discover over 200 species of birds including the Indian Pitta,
+              Orange-headed Thrush, and various migratory species.
+            </p>
+            <button class="card-button">Learn More</button>
+          </div>
+          <div
+            class="feature-card scroll-reveal clickable-card"
+            onclick="showDetails('nature')"
+          >
+            <h3>🌿 Nature Walks</h3>
+            <p>
+              Explore the rich biodiversity of Tadoba with guided nature walks
+              through diverse ecosystems and landscapes.
+            </p>
+            <button class="card-button">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+      <div class="container">
+        <h2 class="section-title">Explore Sri Lanka</h2>
+        <p
+          style="
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+          "
+        >
+          Discover the beautiful island nation and plan your wildlife adventure
+        </p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126562.15738011294!2d79.829047!3d7.0765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f740b8451b07%3A0x7a32909a84e124c9!2sJa-Ela%2C%20Sri%20Lanka!5e0!3m2!1sen!2sin!4v1683282022763!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style="border: 0; border-radius: 20px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Details -->
+    <div id="detailModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalBody">
+          <!-- Content will be dynamically loaded -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contactsection">
+      <div class="container">
+        <h2 class="section-title">Plan Your Adventure</h2>
+        <p
+          style="
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+          "
+        >
+          Ready to witness the wild? Contact us for personalized safari
+          experiences and accommodation bookings.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card scroll-reveal">
+            <h3>📞 Reservations</h3>
+            <a
+              href="tel:+94772243030"
+              style="text-decoration: none; color: white"
+            >
+              <p>+94 77 224 3030</p>
+            </a>
+          </div>
+
+          <div class="contact-card scroll-reveal">
+            <h3>✉️ Email</h3>
+            <a
+              href="mailto:paradisetrailslk@gmail.com"
+              style="text-decoration: none; color: white"
+            >
+              <p>paradisetrailslk@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="contact-card scroll-reveal">
+            <h3>📍 Location</h3>
+            <a
+              href="https://www.google.com/maps/search/Reality+Plaza,+Ja‑Ela,+Sri+Lanka"
+              target="_blank"
+              style="text-decoration: none; color: white"
+            >
+              <p>Reality Plaza, Ja‑Ela, Sri Lanka, 11350</p>
+            </a>
+          </div>
+
+          <div class="contact-card scroll-reveal">
+            <h3>🕒 Office Times</h3>
+            <a
+              href="https://calendar.google.com/calendar/r/eventedit?text=Paradise+Safari&dates=20250627T090000/20250627T100000&details=Safari+Tour+from+Paradise+Trails"
+              target="_blank"
+              style="text-decoration: none; color: white"
+            >
+              <p>9:00 AM & 7:00 PM</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+   <footer class="footer">
+        <div class="footer-content">
+          <div class="brand-section">
+            <a href="../index.html">
+              <img
+                src="../assets/images/logo/paradise-logo.png"
+                class="logo-footer animate-on-scroll"
+                alt="Paradse Logo"
+            /></a>
+            <p class="brand-description animate-on-scroll">
+              As a naturalist, I observe the world not just with curiosity, but
+              with purpose. I believe every leaf, stone, and species holds a
+              story worth listening to. My work is driven by a deep respect for
+              nature and a commitment to understanding, preserving, and living
+              in harmony with it. To me, nature isn't separate from us — it's a
+              part of who we are.
+            </p>
+          </div>
+
+          <div class="footer-column animate-on-scroll">
+            <h3>Socials</h3>
+            <a
+              href="https://www.youtube.com/c/ParadiseTrailsSriLanka"
+              target="_blank"
+              class="footer-link"
+            >
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a
+              href="https://www.instagram.com/paradisetrailslk/"
+              target="_blank"
+              class="footer-link"
+            >
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a
+              href="https://www.facebook.com/paradisetrailslk"
+              target="_blank"
+              class="footer-link"
+            >
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+          </div>
+
+          <div class="footer-column animate-on-scroll">
+            <h3>Navigation</h3>
+            <a href="#home" class="footer-link"
+              ><i class="fas fa-house"></i> Home</a
+            >
+            <a href="#destinations" class="footer-link"
+              ><i class="fas fa-map-marker-alt"></i> Destinations</a
+            >
+            <a href="trips.html" class="footer-link"
+              ><i class="fas fa-plane"></i> Trips</a
+            >
+            <a href="./gallery.html" class="footer-link"
+              ><i class="fas fa-image"></i> Gallery</a
+            >
+            <a href="#about" class="footer-link"
+              ><i class="fas fa-user"></i> About</a
+            >
+            <a href="#contact" class="footer-link"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </div>
+
+          <div class="contact-box animate-on-scroll">
+            <h3>Contact me for any further details</h3>
+
+            <!-- Contact number -->
+            <p class="contact-number">
+              <a href="tel:+94772243030">📞 Call us on 077 224 3030</a>
+            </p>
+
+            <p>
+              Ready to embark on your next adventure? Let's create unforgettable
+              memories together.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2024 ParadiseTrails Pvt. Ltd. All rights reserved. Made with
+            <span class="heart">💚</span> by @Enjoy Programming
+          </p>
+        </div>
+        <!-- -----------------------BOTTOM FOOTER SECTION END ---------------------- -->
+      </footer>
+   
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        // Sticky Navigation Handler
+        const navContainer = document.getElementById("bottomNav");
+
+        function handleStickyNav() {
+          if (!navContainer) return;
+
+          const currentScrollY = window.scrollY;
+          const isScrollingDown = currentScrollY > lastScrollY;
+
+          if (currentScrollY > 100) {
+            navContainer.classList.add("top");
+            navContainer.style.transform =
+              isScrollingDown && currentScrollY > 200
+                ? "translateY(-100%)"
+                : "translateY(0)";
+          } else {
+            navContainer.classList.remove("top");
+            navContainer.style.transform = "translateY(0)";
+          }
+
+          lastScrollY = currentScrollY;
+        }
+
+        // Scroll reveal animation
+        function revealOnScroll() {
+          const reveals = document.querySelectorAll(".scroll-reveal");
+          reveals.forEach((reveal) => {
+            const elementTop = reveal.getBoundingClientRect().top;
+            const elementVisible = 150;
+
+            if (elementTop < window.innerHeight - elementVisible) {
+              reveal.classList.add("revealed");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              handleStickyNav();
+              revealOnScroll();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+
+        // Initial reveal check
+        revealOnScroll();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        });
+      });
+
+      // Modal functionality
+      function showDetails(type) {
+        const modal = document.getElementById("detailModal");
+        const modalBody = document.getElementById("modalBody");
+
+        let content = "";
+        switch (type) {
+          case "tiger":
+            content = `
+                        <h3>🐅 Tiger Safari Experience</h3>
+                        <p>Tadoba is home to over 80 tigers, making it one of Maharashtra's premier tiger reserves. Our morning and evening safaris offer the best chances to spot these magnificent creatures.</p>
+                        <p><strong>Safari Duration:</strong> 3-4 hours</p>
+                        <p><strong>Best Time:</strong> October to June</p>
+                        <p><strong>Price:</strong> ₹3,500 per person</p>
+                        <p><strong>Includes:</strong> Professional guide, vehicle, entry fees</p>
+                    `;
+            break;
+          case "birds":
+            content = `
+                        <h3>🦅 Bird Watching Tours</h3>
+                        <p>Discover over 200 bird species including rare migratory birds. Perfect for photography enthusiasts and nature lovers.</p>
+                        <p><strong>Duration:</strong> 2-3 hours</p>
+                        <p><strong>Best Time:</strong> Early morning (6 AM - 9 AM)</p>
+                        <p><strong>Price:</strong> ₹1,500 per person</p>
+                        <p><strong>Includes:</strong> Binoculars, bird guide, refreshments</p>
+                    `;
+            break;
+          case "nature":
+            content = `
+                        <h3>🌿 Guided Nature Walks</h3>
+                        <p>Explore the forest on foot with our experienced naturalists. Learn about medicinal plants, animal tracks, and forest ecosystems.</p>
+                        <p><strong>Duration:</strong> 2 hours</p>
+                        <p><strong>Difficulty:</strong> Easy to moderate</p>
+                        <p><strong>Price:</strong> ₹800 per person</p>
+                        <p><strong>Includes:</strong> Expert guide, forest documentation</p>
+                    `;
+            break;
+        }
+
+        modalBody.innerHTML = content;
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("detailModal");
+        modal.style.display = "none";
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        const modal = document.getElementById("detailModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

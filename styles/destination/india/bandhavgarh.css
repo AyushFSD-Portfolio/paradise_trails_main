@@ -21,6 +21,7 @@ body {
   z-index: 1000;
   padding: 0 1rem;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: url(../../../assets/images/home-bg.jpg);
 }
 
 .nav-container.top {
@@ -253,7 +254,7 @@ body {
   height: 100vh;
   padding-top: 80px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../../assets/images/tadoba-images/tadoba-image.jpg);
+    url(../../../assets/images/home-bg.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1027,3 +1028,12 @@ body {
     padding: 15px;
   }
 }
+
+
+
+
+
+
+
+
+

@@ -11,41 +11,29 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <!-- Mobile Header -->
-    <header class="mobile-header">
-      <a href="../home.html" class="logo"></a>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+     <header class="mobile-header">
+     
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <nav class="mobile-menu" id="mobileMenu">
-      <a href="../home.html" class="nav-item">Home</a>
-      <a href="../home.html#destination" class="nav-item active"
-        >Destinations</a
-      >
-      <a href="../trips.html" class="nav-item">Trips</a>
-      <a href="../../pages/gallery.html" class="nav-item">Gallery</a>
-      <a href="../home.html#about" class="nav-item">About</a>
-      <a href="../contact.html" class="nav-item">Contact</a>
-    </nav>
+    <!-- Navigation -->
+    <div class="nav-container" id="navContainer">
+        <nav class="bottom-nav" id="navMenu">
+            <a href="../../../pages/home.html" class="nav-item ">Home</a>
+            <a href="../../../pages/home.html#destination" class="nav-item">Destinations</a>
+            <a href="../../../pages/trips.html" class="nav-item active">Trips</a>
+            <a href="../../../pages/gallery.html" class="nav-item">Gallery</a>
+            <a href="../../../pages/about.html" class="nav-item">About</a>
+            <a href="../../../pages/contact.html" class="nav-item">Contact</a>
+        </nav>
+    </div>
 
     <!-- Desktop Navigation Bar -->
-    <div class="nav-container" id="bottomNav">
-      <nav class="bottom-nav">
-        <a href="../home.html" class="nav-item">Home</a>
-        <a href="../home.html#destination" class="nav-item active"
-          >Destinations</a
-        >
-        <a href="../trips.html" class="nav-item">Trips</a>
-        <a href="../../pages/gallery.html" class="nav-item">Gallery</a>
-        <a href="../home.html#about" class="nav-item">About</a>
-        <a href="../contact.html" class="nav-item">Contact</a>
-      </nav>
-    </div>
+   
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="logo">
@@ -54,15 +42,15 @@
       <div class="hero-content">
         <h1>Pench National Park</h1>
         <p>Experience the Original Land of Mowgli - The Jungle Book's Inspiration</p>
-        <div class="hero-buttons">
+          <div class="hero-buttons">
           <a
-            href="#map"
+            href="#highlights"
             class="btn btn-primary"
             onclick="scrollToSection('highlights')"
             >Explore Wildlife</a
           >
           <a
-            href="../contact.html"
+            href="../../../pages/contact_form.html"
             class="btn btn-secondary"
             onclick="scrollToSection('map')"
             >Contact Us</a
@@ -199,9 +187,9 @@
         <div class="map-visual">
           <div class="map-placeholder">
             <img
-              src="../../assets/images/pench-images/pench-map-main.jpeg"
+              src="https://www.penchtreelodge.com/_next/image?url=%2Fimages%2Fpench%20tourism%20map.webp&w=3840&q=75"
               alt="Pench National Park Map"
-              height="800px"
+              height="600px"
               width="700px"
             />
           </div>

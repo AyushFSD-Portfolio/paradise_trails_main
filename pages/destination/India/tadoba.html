@@ -11,41 +11,29 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <!-- Mobile Header -->
     <header class="mobile-header">
-      <a href="../home.html" class="logo"></a>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+     
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <nav class="mobile-menu" id="mobileMenu">
-      <a href="../home.html" class="nav-item">Home</a>
-      <a href="../home.html#destination" class="nav-item active"
-        >Destinations</a
-      >
-      <a href="../trips.html" class="nav-item">Trips</a>
-      <a href="../../pages/gallery.html" class="nav-item">Gallery</a>
-      <a href="../home.html#about" class="nav-item">About</a>
-      <a href="../contact.html" class="nav-item">Contact</a>
-    </nav>
+    <!-- Navigation -->
+    <div class="nav-container" id="navContainer">
+        <nav class="bottom-nav" id="navMenu">
+            <a href="../../../pages/home.html" class="nav-item ">Home</a>
+            <a href="../../../pages/home.html#destination" class="nav-item active">Destinations</a>
+            <a href="../../../pages/trips.html" class="nav-item ">Trips</a>
+            <a href="../../../pages/gallery.html" class="nav-item">Gallery</a>
+            <a href="../../../pages/about.html" class="nav-item">About</a>
+            <a href="../../../pages/contact.html" class="nav-item">Contact</a>
+        </nav>
+    </div>
 
     <!-- Desktop Navigation Bar -->
-    <div class="nav-container" id="bottomNav">
-      <nav class="bottom-nav">
-        <a href="../home.html" class="nav-item">Home</a>
-        <a href="../home.html#destination" class="nav-item active"
-          >Destinations</a
-        >
-        <a href="../trips.html" class="nav-item">Trips</a>
-        <a href="../../pages/gallery.html" class="nav-item">Gallery</a>
-        <a href="../home.html#about" class="nav-item">About</a>
-        <a href="../contact.html" class="nav-item">Contact</a>
-      </nav>
-    </div>
+   
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="logo">
@@ -54,15 +42,15 @@
       <div class="hero-content">
         <h1>Tadoba National Park</h1>
         <p>Experience the Wild Beauty of Maharashtra's Premier Tiger Reserve</p>
-        <div class="hero-buttons">
+       <div class="hero-buttons">
           <a
-            href="#map"
+            href="#highlights"
             class="btn btn-primary"
             onclick="scrollToSection('highlights')"
             >Explore Wildlife</a
           >
           <a
-            href="../contact.html"
+            href="../../../pages/contact_form.html"
             class="btn btn-secondary"
             onclick="scrollToSection('map')"
             >Contact Us</a
@@ -426,5 +414,6 @@
           });
       }
     </script>
+    <script src="../../../pages/home.js"></script>
   </body>
 </html>

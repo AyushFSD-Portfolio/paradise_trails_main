@@ -1,34 +1,22 @@
 // Combined and corrected trip.js with modal fix, scrolling, ripple effect, sticky nav, and search functionality
 
-function searchFunction() {
-  alert("Search functionality is Comming soon!");
+
+function search() {
+  const park = document.querySelector("select:nth-of-type(1)").value;
+  const location = document.querySelector("select:nth-of-type(2)").value;
+  const animal = document.querySelector("select:nth-of-type(3)").value;
+  const vehicle = document.querySelector("select:nth-of-type(4)").value;
+
+  alert(
+    `Searching for trips:\nPark: ${park}\nLocation: ${location}\nAnimal: ${animal}\nVehicle: ${vehicle}`
+  );
 }
+
 
 // Trip data (paste your full dataset below)
 const trips = [
   {
     id: 1,
-    title: "Yala Full Day Safari",
-    location: "Sri Lanka",
-    date: "2025-05-31",
-    price: "LKR 17,500",
-    category: "recent",
-    image: "../assets/images/trip-yala.png",
-    description:
-      "Experience a thrilling full-day safari in Yala with guided tours, meals, and wildlife photography.",
-    tags: ["Safari", "Wildlife", "Photography", "Sri Lanka"],
-    duration: "1 Day",
-    highlights: [
-      "A/C Transport from Colombo & back",
-      "Park Entry and Safari Jeeps",
-      "Guided Full Day Safari",
-      "Breakfast & Lunch Included",
-      "Water, Refreshments, and Snacks",
-      "Professional Photography Opportunities",
-    ],
-  },
-  {
-    id: 2,
     title: "Yala National Park Safari",
     location: "Sri Lanka",
     date: "2024-12-10",
@@ -48,7 +36,7 @@ const trips = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     title: "Udawalawe National Park Safari",
     location: "Sri Lanka",
     date: "2024-11-05",
@@ -66,6 +54,27 @@ const trips = [
       "Visit to the Udawalawe Elephant Transit Home",
       "Comfortable eco-resort stay",
       "Local Sri Lankan meals and refreshments",
+    ],
+  },
+  {
+    id: 3,
+    title: "Serengeti Plains Adventure",
+    location: "Tanzania",
+    date: "2024-02-10",
+    price: "$2,800",
+    category: "recent",
+    image:
+      "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    description:
+      "Explore endless plains and witness incredible wildlife diversity in the Serengeti.",
+    tags: ["Plains", "Wildlife", "Photography"],
+    duration: "6 Days",
+    highlights: [
+      "Endless plains exploration",
+      "Diverse wildlife viewing",
+      "Mobile camping experience",
+      "Professional photography workshop",
+      "Ngorongoro Crater visit",
     ],
   },
   {
@@ -604,43 +613,43 @@ class AdventureGallery {
   }
 
   openModal(tripId) {
-    const trip = trips.find((t) => t.id === tripId);
-    if (!trip) return;
+  const trip = trips.find((t) => t.id === tripId);
+  if (!trip) return;
 
-    // Set modal values
-    document.getElementById("modalImage").src = trip.image;
-    document.getElementById("modalTitle").textContent = trip.title;
-    document.getElementById("modalLocation").textContent = trip.location;
-    document.getElementById("modalDescription").textContent = trip.description;
+  // Set modal values
+  document.getElementById("modalImage").src = trip.image;
+  document.getElementById("modalTitle").textContent = trip.title;
+  document.getElementById("modalLocation").textContent = trip.location;
+  document.getElementById("modalDescription").textContent = trip.description;
 
-    // Format and populate highlights/details
-    const detailsList = document.getElementById("modalDetails");
-    detailsList.innerHTML = "";
-    trip.highlights.forEach((highlight) => {
-      const li = document.createElement("li");
-      li.textContent = highlight;
-      detailsList.appendChild(li);
-    });
+  // Format and populate highlights/details
+  const detailsList = document.getElementById("modalDetails");
+  detailsList.innerHTML = "";
+  trip.highlights.forEach((highlight) => {
+    const li = document.createElement("li");
+    li.textContent = highlight;
+    detailsList.appendChild(li);
+  });
 
-    document.getElementById("modalPrice").textContent = trip.price;
+  document.getElementById("modalPrice").textContent = trip.price;
 
-    // Show modal
-    document.querySelector(".trip-modal-overlay").style.display = "flex";
-    document.body.style.overflow = "hidden";
+  // Show modal
+  document.querySelector(".trip-modal-overlay").style.display = "flex";
+  document.body.style.overflow = "hidden";
 
-    // Add close listener
-    document.querySelector(".modal-close-btn").addEventListener("click", () => {
-      this.closeModal();
-    });
+  // Add close listener
+  document.querySelector(".modal-close-btn").addEventListener("click", () => {
+    this.closeModal();
+  });
+}
+
+ closeModal() {
+  const modal = document.querySelector(".trip-modal-overlay");
+  if (modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
   }
-
-  closeModal() {
-    const modal = document.querySelector(".trip-modal-overlay");
-    if (modal) {
-      modal.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-  }
+}
 
   bookTrip(tripId) {
     const trip = trips.find((t) => t.id === tripId);

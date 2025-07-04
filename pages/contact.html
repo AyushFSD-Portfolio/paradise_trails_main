@@ -6,36 +6,43 @@
     <title>Tadoba National Park - Wild Adventures Await</title>
     <link rel="stylesheet" href="../styles/contact.css" />
     <link rel="stylesheet" href="../styles/home.css">
+ 
     <link rel="icon"
         href="https://images.vexels.com/media/users/3/312344/isolated/preview/9644600280ae32a366400a8c9d9030f7-green-leaves-on-a-safari-expedition.png"
         type="image/png" />
   </head>
   <body>
-    <div class="logo" id="home">
-      <a href="../index.html">
-        <img
-          src="../assets/images/logo/paradise-logo.png"
-          alt="Paradise Trails Logo"
-      /></a>
-    </div>
+   
+
+       <div class="logo" id="home">
+        <a href="../index.html">
+          <img
+            src="../assets/images/logo/paradise-logo.png"
+            alt="Paradise Trails Logo"
+        /></a>
+      </div>
+      <!-- LOGO --> 
+    <header class="mobile-header">
+     
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
     <!-- Navigation -->
-    <div class="nav-container" id="bottomNav">
-      <nav class="bottom-nav">
-        <a href="../pages/home.html" class="nav-item" data-page="home">Home</a>
-        <a href="./home.html#destinations" class="nav-item" data-page="features"
-          >Destinations</a
-        >
-        <a href="../pages/trips.html" class="nav-item" data-page="map">Trips</a>
-        <a href="../pages/gallery.html" class="nav-item" data-page="gallery"
-          >Gallery</a
-        >
-        <a href="../pages/about.html" class="nav-item" data-page="about">About</a>
-        <a href="#contact" class="nav-item active" data-page="contact"
-          >Contact</a
-        >
-      </nav>
+    <div class="nav-container" id="navContainer">
+        <nav class="bottom-nav" id="navMenu">
+            <a href="../pages/home.html" class="nav-item active">Home</a>
+            <a href="../pages/home.html#destinations" class="nav-item">Destinations</a>
+            <a href="../pages/trips.html" class="nav-item">Trips</a>
+            <a href="../pages/gallery.html" class="nav-item">Gallery</a>
+            <a href="../pages/about.html" class="nav-item">About</a>
+            <a href="" class="nav-item">Contact</a>
+        </nav>
     </div>
+
 
     <!-- Hero Section -->
     <!-- Hero Section -->
@@ -67,9 +74,14 @@
           Trails? We're here to help you!
         </p>
         <div class="cta-group">
-          <a href="../pages/contact_form.html" class="cta-button cta-primary">Get In Touch</a>
-          <a href="#features" class="cta-button cta-secondary">Our Services</a>
+         
+        <a href="../pages/contact_form.html" class="contact-cta">
+                    <span>Contact us for more details</span>
+                    <span class="arrow">↗</span>
+                </a>
         </div>
+
+        
       </div>
     </section>
 
@@ -429,5 +441,6 @@
         }
       };
     </script>
+    <script src="../pages/home.js"></script>
   </body>
 </html>
